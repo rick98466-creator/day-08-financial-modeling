@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "financial-modeling"
+version = "0.1.0"
+description = "Python financial modeling and discounted cash flow valuation engine"
+requires-python = ">=3.14"
+dependencies = [
+    "pandas>=3.0.0",
+    "numpy>=2.0.0",
+    "openpyxl>=3.1.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
